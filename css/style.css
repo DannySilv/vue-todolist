@@ -5,7 +5,7 @@
 }
 
 html {
-    font-family: 'Macondo', cursive;
+    font-family: 'Macondo';
     font-size: 100%;
 }
 
@@ -21,4 +21,50 @@ header {
 
 .header-logo {
     width: 250px;
+}
+
+/* MAIN */
+/* FILTER */
+.filter {
+    text-align: center;
+}
+
+.filter-element {
+    text-align: center;
+}
+
+.filter-element input, .filter-element button {
+    padding: 0.4rem 1rem;
+    border: 1px solid black;
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+}
+
+/* TODO */
+.todos {
+    background-color: #d3d3d3;
+    width: 60%;
+    margin: 1.5rem auto 0;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0.8rem;
+}
+
+ul.todo-list li {
+    border-bottom: 1px solid black;
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+/* ACTIVE */
+.active {
+    text-decoration: line-through;
 }

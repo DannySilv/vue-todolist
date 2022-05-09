@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDoList</title>
     <!-- STYLE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +21,48 @@
             <img class="header-logo" src="img/logo.png" alt="Logo Boolean">
         </header>
         <!-- /HEADER -->
+
+        <!-- MAIN -->
+        <main>
+
+            <!-- FILTER -->
+            <section class="filter">
+                <div class="filter-element">
+                    <!-- BONUS 1 -->
+                    <input 
+                    type="text" 
+                    placeholder="New To Do"
+                    @keyup.enter="addTodo"
+                    v-model="newTodo">
+                    <button @click="addTodo">Aggiungi</button>
+                </div>
+            </section>
+            <!-- /FILTER -->
+
+            <!-- TODOS -->
+            <section class="todos">
+                <ul class="todo-list">
+                    <li 
+                    v-for="(item, index) in todos">
+                        <!-- MILESTONE 1 -->
+                        <span @click="activeDone(index)"
+                        :class="item.done ? 'active' : '' "
+                        class="grow">
+                        {{ item.text }}
+                        </span>
+                        <div class="todo-actions">
+                            <i @click="removeTodo(index)" 
+                            class="fas fa-trash-alt">
+                            </i>
+                        </div>
+                    </li>
+                    
+                </ul>
+
+            </section>
+            <!-- /TODOS -->
+        </main>
+        <!-- /MAIN -->
     </div>
     
     <script src="js/script.js" type="text/javascript"></script>
