@@ -3,3 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    font-family: 'Macondo', cursive;
+    font-size: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.header-logo {
+    width: 250px;
+}
